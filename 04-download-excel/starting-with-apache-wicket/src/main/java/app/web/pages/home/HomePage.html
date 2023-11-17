@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+    <meta charset="utf-8">
+    <title>Apache Wicket Course</title>
+</head>
+<body>
+    <wicket:extend>
+        <style>
+        </style>
+        <h2 wicket:id="label">Apache Wicket - Todo Application</h2>
+
+        <div wicket:id="feedbackPanel">
+
+        </div>
+
+        <div wicket:id="sectionForm" style="padding-top: 10px; padding-bottom: 10px;">
+            <form wicket:id="form">
+                <div class="toolbar-top" style="padding-top: 20px">
+                    <button wicket:id="addItemLink" type="button" class="btn btn-secondary btn-sm">Add new Item</button>&#160;
+                    <button wicket:id="remove" type="button" class="btn btn-secondary btn-sm">Remove selected Items</button>&#160;
+                    <button wicket:id="downloadExcelbtn" type="button" class="btn btn-primary btn-sm">Export to MS</button>&#160;
+                </div>
+                <div wicket:id="formNew" style="padding: 5px; background-color: #eeeeee;">
+                    <table cellpadding="5">
+                        <tr>
+                            <td>Title</td>
+                            <td><input wicket:id="title" type="text" /></td>
+                        </tr>
+                        <tr>
+                            <td>Description</td>
+                            <td><input wicket:id="body" type="text" /></td>
+                        </tr>
+                    </table>
+                    <button wicket:id="save" type="button" class="btn btn-success btn-sm">Save</button>
+                </div>
+
+                <div class="items">
+                    <table class="table">
+                        <tr>
+                            <th style="width: 200px;">Title</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr wicket:id="todosList">
+                            <td><input wicket:id="selected" type="checkbox" /></td>
+                            <td wicket:id="title"></td>
+                            <td wicket:id="body"></td>
+                        </tr>
+                    </table>
+                </div>
+            </form>
+        </div>
+
+        <div class="toolbar-bottom">
+            <button wicket:id="btnSelectAll" type="button" class="btn btn-light btn-sm">Select All</button>&#160;
+            <button wicket:id="btnDeSelectAll" type="button" class="btn btn-light btn-sm">DeSelect All</button>&#160;
+        </div>
+    </wicket:extend>
+</body>
+</html>

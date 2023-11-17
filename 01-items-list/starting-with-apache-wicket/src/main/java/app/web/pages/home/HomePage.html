@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+    <meta charset="utf-8">
+    <title>Apache Wicket Course</title>
+</head>
+<body>
+    <wicket:extend>
+        <style>
+
+        </style>
+        <h2 wicket:id="label">Apache Wicket - Todo Application</h2>
+
+        <div class="items">
+            <table class="table">
+                <tr>
+                    <th style="width: 200px;">Title</th>
+                    <th>Description</th>
+                </tr>
+                <tr wicket:id="todosList">
+                    <td wicket:id="title"></td>
+                    <td wicket:id="body"></td>        
+                </tr>
+            </table>
+        </div>
+    </wicket:extend>
+</body>
+</html>
